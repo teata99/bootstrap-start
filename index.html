@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
     <link href="./bootstrap-5.2.3/css/bootstrap.min.css" rel="stylesheet">
   </head>
+        <style>
+          
+        </style>
+          
   <body>
     
     <!-- 헤더 -->
@@ -47,6 +51,13 @@
             <div class="card-header">Side Widget</div>
             <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
         </div>
+        
+        <hr/>
+        
+        <div class="card card-body">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+            
     </div>
     
     <hr/>
@@ -61,6 +72,26 @@
             <li class="list-group-item">A fourth item</li>
             <li class="list-group-item">And a fifth one</li>
         </ul>
+        
+        <hr/>
+        
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Subheading</div>
+                    Content for list item
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Subheading</div>
+                    Content for list item
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+            </li>            
+        </ol>
+        
     </div>
     
     <hr/>
@@ -196,9 +227,417 @@
         </div>
     </div>
     
+    <hr/>
+    
+    <div class="container">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+                <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+                <button class="btn btn-primary btn-lg">Example button</button>
+            </div>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+
+        <button type="button" class="btn btn-primary position-relative">
+            Inbox
+            <span class="position-absolute top-0 start-100 translate-middle badge bg-danger rounded-pill">
+                99+
+                <span class="visually-hidden">unread message</span>
+            </span>
+        </button>
+        
+        <hr>
+       
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 fw-bold text-primary">Projects</h6>
+            </div>
+            <div class="card-body">
+                <h4 class="small fw-bold text-muted">
+                    Server Migration <span class="float-end">20%</span>
+                </h4>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%;"></div>
+                </div>
+            </div>
+        </div>        
+        
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-secondary">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        
+        <hr/>
+        
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        
+        <hr/>
+
+        <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status"></span>
+            <span class="visually-hidden">Loading...</span>
+        </button>
+                
+        <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status"></span>
+            Loading...
+        </button>
+    </div>    
+
+    <hr/>
+    
+    <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Library</li>
+            </ol>
+        </nav>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Action1</a></li>
+                <li><a href="#" class="dropdown-item">Action2</a></li>
+                <li><a href="#" class="dropdown-item">Action3</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
+    </div>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <p>
+            Placeholder text to demonstrate some 
+            <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">inline links</a> with tooltips.
+        </p>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <p>
+            <a href="#collapseExample" class="btn btn-primary" data-bs-toggle="collapse" role="button">
+                Link with href
+            </a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample">
+                Button with data-bs-target
+            </button>    
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            </div>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>                                
+            </tbody>
+        </table>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="bg-info clearfix">
+            <button type="button" class="btn btn-secondary float-start">Example Button floated left</button>
+            <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="hstack gap-3">
+            <input class="form-control me-auto" type="text" placeholder="Add your item here ...">
+            <button type="button" class="btn btn-primary">Submit</button>
+            <div class="vr"></div>
+            <button type="button" class="btn btn-outline-danger">Reset</button>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-2 text-truncate">
+                This text is quite long, and will be truncated once displayed.
+            </div>
+        </div>
+        
+        <hr/>
+        
+        <span class="d-inline-block text-truncate" style="max-width: 200px;">
+            This text is quite long, and will be truncated once displayed.
+        </span>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="d-flex" style="height: 100px;">
+            <div class="vr"></div>
+        </div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <button class="btn btn-primary opacity-100">100%</button>
+        <button class="btn btn-primary opacity-75">75%</button>
+        <button class="btn btn-primary opacity-50">50%</button>
+        <button class="btn btn-primary opacity-25">25%</button>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="shadow-none p-3 mb-4 bg-light rounded">No shadow</div>
+        <div class="shadow-sm p-3 mb-4 bg-light rounded">Small shadow</div>
+        <div class="shadow p-3 mb-4 bg-light rounded">Regular shadow</div>
+        <div class="shadow-lg p-3 mb-4 bg-light rounded">Larger shadow</div>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <p class="text-start">Start aligned text on all viewport sizes.</p>
+        <p class="text-center">Center aligned text on all viewport sizes.</p>
+        <p class="text-end">End aligned text on all viewport sizes.</p>
+        
+        <hr/>
+        
+        <div class="badge bg-primary text-wrap" style="width: 6rem;">
+            This text should wrap.
+        </div>
+        
+        <div class="badge bg-primary text-nowrap" style="width: 6rem;">
+            This text should overflow the parent.
+        </div>
+        
+        <hr/>
+        
+        <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+        
+        <hr/>
+        
+        <p class="fs-3">.fs-3 text</p>
+        <p class="fw-bold">Bold text.</p>
+        <p class="fw-light">Light weight text.</p>
+        <p class="fst-italic">Italic text</p>
+        
+        <hr/>
+        
+        <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+        
+        <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+        
+        <hr/>
+        
+        <p class="font-monospace">This is in monospace</p>
+        
+        <hr/>
+        
+        <p class="text-muted">Muted text with a <a href="#" class="text-reset">reset link</a></p>
+        
+        <hr/>
+        
+        <p class="text-decoration-underline">This text has a line underneath it.</p>
+        <p class="text-decoration-line-through">This text has a line going through it.</p>
+        <a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+        
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+       
+       <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+       <div class="p-3 mb-2 bg-success text-white bg-opacity-75">This is 75% opacity success background</div>
+        
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <p class="text-primary">.text-primary</p>
+        <p class="text-secondary">.text-secondary</p>
+        <p class="text-success">.text-success</p>
+        <p class="text-danger">.text-danger</p>
+        <p class="text-warning">.text-warning</p>
+        <p class="text-info">.text-info</p>
+        <p class="text-light bg-dark">.text-light bg-dark</p>
+        <p class="text-black-50">.text-black-50</p>
+        <p class="text-white-50 bg-dark">.text-white-50 bg-dark</p>
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="text-bg-primary p-3">text-bg-primary</div>
+        <div class="text-bg-secondary p-3">text-bg-seconday</div>
+        <div class="text-bg-light p-3">text-bg-light</div>
+        <div class="text-bg-dark p-3">text-bg-dark</div>
+        
+        <hr/>
+        
+        <span class="badge text-bg-primary">Primary</span>
+        <span class="badge text-bg-info">Info</span>
+        
+    </div>
+    
+    <hr/>
+    
+    <div class="container">
+        <div class="border p-3 mb-3">border</div>
+        <div class="border-top p-3 mb-3">border-top</div>
+        <div class="border-end p-3 mb-3">border-end</div>
+        <div class="border-bottom p-3 mb-3">border-bottom</div>
+        <div class="border-start p-3 mb-3">border-start</div>
+        
+        <hr/>
+        
+        <div class="border border-primary p-3 mb-3">border-primary</div>
+        <div class="border border-danger p-3 mb-3">border-danger</div>
+        <div class="border border-info border-start-0 p-3 mb-3">border-start-0</div>         <div class="border border-success border-opacity-75 p-3 mb-3">This is 75% opacity success border</div>       
+        <div class="border border-3 p-3 mb-3">border border-3</div>
+        
+        <hr/>
+        
+        <img class="border border-info rounded-end p-3 mb-3">
+        <p>border rounded-end</p>
+        <img class="border border-info rounded-circle p-3 mb-3">
+        <p>border rounded-circle</p>
+        <img class="border border-info rounded-pill p-3 px-5 mb-3">
+        <p>border rounded-pill</p>
+                                                                                                   
+        <img class="border border-info rounded-1 p-3 mb-3">
+        <p>border rounded-1</p>
+        <img class="border border-info rounded-3 p-3 mb-3">
+        <p>border rounded-3</p>                                                                                                                                                                                                       
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+
+                                                                                                    
+                                                                       
+                                                                       
+                                                                        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
     <script src="./bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));    
+    </script>
   </body>
 </html>
