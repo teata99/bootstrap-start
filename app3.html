@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
+
+    <link href="./bootstrap-5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            height: 100%;
+            position: relative;
+        }
+        
+        body:before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #2a5555;
+            opacity: 0.7;
+            z-index: 1;
+        }
+        
+        video.bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 0;
+        }
+        
+        @media (pointer: coarse) and (hover: none) {
+            body {
+                background: url("images/bg-mobile-fallback.jpg") #2a5555 no-repeat center center scroll;
+                background-size: cover;
+            }
+            
+            body video {
+                display: none;
+            }
+        }
+        
+        .masthead {
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .masthead:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+        
+        .masthead .masthead-content {
+            position: relative;
+            max-width: 40rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        
+        .masthead .masthead-content h1, .masthead .masthead-content .h1 {
+            font-size: 2.5rem;
+        }
+        
+        .masthead .masthead-content p {
+            font-size: 1.2rem;
+        }
+        
+        .masthead .masthead-content strong {
+            font-weight: 700;
+        }
+        
+        .masthead .masthead-content .input-group-newsletter input {
+            height: auto;
+            width: 100%;
+            font-size: 1rem;
+            padding: 1rem;
+        }
+        
+        .masthead .masthead-content .input-group-newsletter button {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: calc(1rem + 2px);
+        }
+        
+        @media (min-width: 992px) {
+          .masthead {
+              height: 100%;
+              width: 75vw;
+              min-height: 0;
+              padding-bottom: 0;
+          }
+          .masthead:before {
+              transform: skewX(-9deg);
+              transform-origin: top right;
+          }
+          .masthead .masthead-content {
+              padding-top: 0;
+              padding-bottom: 0;
+              padding-left: 2rem;
+              padding-right: 9rem;
+          }
+          .masthead .masthead-content h1, .masthead .masthead-content .h1 {
+              font-size: 3.5rem;
+          }
+          .masthead .masthead-content p {
+              font-size: 1.3rem;
+          }
+        }
+        @media (min-width: 1200px) {
+          .masthead {
+              width: 65vw;
+          }
+        }
+        
+        .social-icons {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .social-icons .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 100rem;
+        }
+        
+        @media (min-width: 992px) {
+            .social-icons {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                right: 2.5rem;
+                width: auto;
+            }
+        }
+        
+    </style>
+  </head>
+  <body>
+    
+    <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="videos/bg.mp4" type="video/mp4" />        
+    </video>
+    
+    <div class="masthead">
+        <div class="masthead-content text-white">
+            <div class="container-fluid px-4 px-lg-0">
+                <h1 class="fst-italic lh-1 mb-4">Our Website is Coming Soon</h1>
+                <p class="mb-5">We're working hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!</p>
+                
+                <form class="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row input-group-newsletter">
+                        <div class="col">
+                            <input class="form-control" id="email" type="email" placeholder="Enter email address..." data-sb-validations="required, email">
+                        </div>
+                        <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                    </div>
+                    <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
+                    <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
+                    
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3 mt-2">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br/>
+                            <a href="#">contact-forms</a>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3 mt-2">Error sending message!</div>
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </div>
+    
+    <div class="social-icons">
+        <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+            <a href="#" class="btn btn-dark m-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-dark m-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-dark m-3"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    
+    
+    <script src="./bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  </body>
+</html>
