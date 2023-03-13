@@ -98,7 +98,7 @@ function initForm() {
     $("#kor").val("");
     $("#eng").val("");
     $("#answer").val("");
-    $("#correct").text("0.00%");
+    $("#correct").text("0%");
     $("#eng").attr("type", "password");
     $("#pagination").text("");
 }
@@ -118,8 +118,10 @@ function answerKeyEvent() {
         }
     });
     
-    $("#correct").text(Math.round((correctCnt / engArray.length * 100) * 100) / 100 + "%");
-    
+    let per = Math.round((correctCnt / engArray.length * 100) * 1) / 1;
+    $("#progress").attr("style", "width:"+per+"%");
+    $("#correct").text(per+"%");
+        
     if(window.event.keyCode == 13) {
         correctCheck();
     }
