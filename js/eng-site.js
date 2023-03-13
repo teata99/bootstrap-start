@@ -1,6 +1,7 @@
 let engData;
 let navCnt = 0;
 let dataCnt = 0;
+let classPage = 1;
 let totalPage = 1;
 let page = 1;
 
@@ -25,6 +26,7 @@ function appendNavClass() {
 
 function onClickNav(c1, c2, contentIdx) {
     let pageCnt = 1;
+    let classCnt = 1;
     page = contentIdx;
     
     initForm();
@@ -38,6 +40,7 @@ function onClickNav(c1, c2, contentIdx) {
                     $("#breadClass2").text(class2);
                     $("#kor").val(engData[class1][class2][class3]['kor']);
                     $("#eng").val(engData[class1][class2][class3]['eng']);
+                    classPage = classCnt;
                 }
                 
                 if(class1 == c1 && class2 == c2) {
@@ -45,12 +48,30 @@ function onClickNav(c1, c2, contentIdx) {
                     totalPage = pageCnt;
                     pageCnt += 1;
                 }
+                
+                
             }
-
+            
+            classCnt += 1;
         }
     }
+}
+
+function moveClassPage(direction) {
+    let classCnt = 1;
+    let changePage = classPage + direction;
     
-    
+    for(class1 in engData) {
+        for(class2 in engData[class1]) {
+
+            if(classCnt == changePage) {
+                onClickNav(class1, class2, 1);
+                return;
+            }
+            
+            classCnt += 1;
+        }
+    }
 }
 
 function movePage(direction) {
@@ -116,9 +137,11 @@ window.addEventListener('keydown', function(event) {
     switch(event.key) {
         case "Down":
         case "ArrowDown":
+                    moveClassPage(1);
                     break;
         case "Up":
         case "ArrowUp":
+                    moveClassPage(-1);
                     break;
         case "Left":
         case "ArrowLeft":
