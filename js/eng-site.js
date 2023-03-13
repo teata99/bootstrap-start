@@ -32,7 +32,7 @@ function onClickNav(c1, c2, contentIdx) {
         for(class2 in engData[class1]) {
             for(class3 in engData[class1][class2]) {
                 
-                if(class1 == c1 && class2 == c2 && class3 == contentIdx) {
+                if(class1 == c1 && class2 == c2 && pageCnt == contentIdx) {
                     $("#breadClass1").text(class1);
                     $("#breadClass2").text(class2);
                     $("#kor").val(engData[class1][class2][class3]['kor']);
@@ -40,6 +40,7 @@ function onClickNav(c1, c2, contentIdx) {
                 }
                 
                 if(class1 == c1 && class2 == c2) {
+                    console.log(class1, class2, pageCnt, contentIdx);
                     addPage(class1, class2, pageCnt, contentIdx);
                     pageCnt += 1;
                 }
