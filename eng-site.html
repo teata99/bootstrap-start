@@ -95,10 +95,11 @@
                     <span class="fs-5 fw-semibold">Eng Site</span>
                 </a>
                
-                <ul class="list-unstyled ps-0">
+                <ul class="list-unstyled ps-0" id="navClass">
+                <!--
                     <li class="mb-1">
                         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                        <span class="ms-1">[고딸영어] 관계대명사 복습</span>
+                        <span class="ms-1">고딸영어복습 - 관계대명사</span>
                         </button>
                         <div class="collapse show" id="home-collapse">
                             <ol class="btn-toggle-nav list-unstyl fw-normal pb-1 small">
@@ -118,15 +119,50 @@
                             </ol>
                         </div>
                     </li>
-
                     <li class="mb-1">
 
-                    </li>
+                    </li>                    
+                -->
+
                 </ul>
 
             </div>
             
-            <main class="col-md-8 col-lg-9 ms-sm-auto px-md-4">
+            <main class="col-md-8 col-lg-9 ms-sm-auto px-md-4" id="mainContent">
+
+               <div class="p-3 mb-5 mt-4 bg-light rounded-3">
+                   <div class="container-fluid">
+                       <nav class="mb-4" style="--bs-breadcrumb-divider: '>';">
+                           <ol class="breadcrumb">
+                               <li class="breadcrumb-item" id="breadClass1">Nav1</li>
+                               <li class="breadcrumb-item" id="breadClass2">Nav2</li>
+                           </ol>
+                       </nav>
+                       <input class="form-control mb-3 text-success bg-white border-success" type="text" id="kor" readonly disabled>
+                       <input class="form-control mb-3 text-warning bg-white border-warning" type="password" id="eng" readonly disabled>
+                       <label class="form-label mb-3">정답률: <span id="correct">0.00%</span></label>
+                       <div class="input-group">
+                           <input class="form-control" type="text" id="answer" onKeyup="answerKeyEvent(this);">
+                           <button class="btn btn-primary" onClick="correctCheck();">Check</button>
+                       </div>
+                   </div>
+               </div>
+               
+               <nav class="mt-5 p-3">
+                   <ul class="pagination justify-content-center" id="pagination">
+                       <!--li class="page-item disabled">
+                           <a href="#" class="page-link" aria-label="Previous">
+                               <span aria-hidden="true">&laquo;</span>
+                           </a>
+                       </li-->
+                       <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                       <!--li class="page-item">
+                           <a href="#" class="page-link" aria-label="Next">
+                               <span aria-hidden="true">&raquo;</span>
+                           </a>                           
+                       </li-->
+                   </ul>
+               </nav>
                 
             </main>
         </div>
@@ -137,7 +173,10 @@
     <footer>
         
     </footer>
-    
-    <script src="./bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="./bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/yaml.js"></script>
+    <script type="text/javascript" src="./js/eng-site.js"></script>
+        
   </body>
 </html>
