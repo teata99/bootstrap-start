@@ -1,6 +1,7 @@
 let engData;
 let navCnt = 0;
 let dataCnt = 0;
+let totalPage = 1;
 let page = 1;
 
 function appendNavClass() {
@@ -41,6 +42,7 @@ function onClickNav(c1, c2, contentIdx) {
                 
                 if(class1 == c1 && class2 == c2) {
                     addPage(class1, class2, pageCnt, contentIdx);
+                    totalPage = pageCnt;
                     pageCnt += 1;
                 }
             }
@@ -49,6 +51,14 @@ function onClickNav(c1, c2, contentIdx) {
     }
     
     
+}
+
+function movePage(direction) {
+    let changePage = page + direction;
+
+    if(changePage > 0 && changePage <= totalPage) {
+        onClickNav($("#breadClass1").text(), $("#breadClass2").text(), changePage);
+    }
 }
 
 function addPage(class1, class2, pageCnt, nowPage) {
@@ -98,7 +108,30 @@ function correctCheck() {
     $("#eng").attr("type", "input");
 }
 
-
+window.addEventListener('keydown', function(event) {
+    if(event.defaultPrevented) {
+        return;
+    }
+    
+    switch(event.key) {
+        case "Down":
+        case "ArrowDown":
+                    break;
+        case "Up":
+        case "ArrowUp":
+                    break;
+        case "Left":
+        case "ArrowLeft":
+                    movePage(-1);
+                    break;
+        case "Right":
+        case "ArrowRight":
+                    movePage(1);
+                    break;                    
+    }
+    
+    //event.preventDefault();
+});
 
 $(document).ready(function() {
     const url = new URL(window.location.href);
