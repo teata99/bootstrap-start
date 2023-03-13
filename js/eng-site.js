@@ -40,7 +40,6 @@ function onClickNav(c1, c2, contentIdx) {
                 }
                 
                 if(class1 == c1 && class2 == c2) {
-                    console.log(class1, class2, pageCnt, contentIdx);
                     addPage(class1, class2, pageCnt, contentIdx);
                     pageCnt += 1;
                 }
